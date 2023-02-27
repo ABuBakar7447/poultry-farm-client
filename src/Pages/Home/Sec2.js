@@ -6,8 +6,8 @@ const Sec2 = () => {
         <div className='mt-72 lg:mt-16'>
             <div>
                
-                <div className="hero h-[500px] border rounded mt-10" style={{ backgroundImage: `url("https://thumbs.dreamstime.com/b/poultry-farm-chicken-business-purpose-farming-meat-eggs-food-111218730.jpg")` }}>
-                    <div className="hero-overlay bg-opacity-60"></div>
+                <div className="hero h-[500px] my-10" style={{ backgroundImage: `url("https://thumbs.dreamstime.com/b/poultry-farm-chicken-business-purpose-farming-meat-eggs-food-111218730.jpg")` }}>
+                    <div className="hero-overlay bg-opacity-34"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="">
                             <h1 className="mb-5 text-5xl text-yellow-400 font-bold font-serif">Progressive Solutions</h1>
