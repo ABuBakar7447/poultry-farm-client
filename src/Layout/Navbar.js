@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../context/Authprovider';
 import pic1 from '../Picture/pngtree-rooster-logo1.png'
 
 const Navbar = () => {
+    const { user, userLogOut } = useContext(AuthContext)
+
+    const handleLogout = () => {
+        userLogOut()
+            .then()
+            .catch()
+    }
     return (
         <div>
             <div className="navbar h-24 bg-yellow-400 font-bold">
@@ -14,25 +22,47 @@ const Navbar = () => {
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><Link to='/'>Home</Link></li>
                             <li><Link to='/allServices'>Services</Link></li>
-                            <li><Link to='/myreview'>My Review</Link></li>
-                            <li><Link to='/login'>LogIn</Link></li>
-                            <li><Link to='/signin'>SignIn</Link></li>
+                            {
+                                user?.email ?
+                                    <><li><Link to='/myreview'>My Review</Link></li>
+                                    <li><Link to=' /addservice'>Add Service</Link></li>
+                                        <li>
+                                            <button onClick={handleLogout}>Log Out</button>
+                                        </li>
+                                    </>
+                                    :
+                                    <li><Link to='/login'>LogIn</Link></li>
+                            }
                             
+                            
+                            <li><Link to='/signin'>SignIn</Link></li>
+
                         </ul>
                     </div>
                     <div className='flex justify-center align-middle'>
-                        <img src={pic1} alt="" className='w-22 h-12'/>
-                    <Link to='/' className="text-xl text-center py-3">Better Life Farms</Link>
+                        <img src={pic1} alt="" className='w-22 h-12' />
+                        <Link to='/' className="text-xl text-center py-3">Better Life Farms</Link>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/allServices'>Services</Link></li>
-                        <li><Link to='/myreview'>My Review</Link></li>
-                        <li><Link to='/login'>LogIn</Link></li>
-                        <li><Link to='/signin'>SignIn</Link></li>
-                        
+                    <li><Link to='/'>Home</Link></li>
+                            <li><Link to='/allServices'>Services</Link></li>
+                            {
+                                user?.email ?
+                                    <><li><Link to='/myreview'>My Review</Link></li>
+                                    <li><Link to=' /addservice'>Add Service</Link></li>
+                                        <li>
+                                            <button onClick={handleLogout}>Log Out</button>
+                                        </li>
+                                    </>
+                                    :
+                                    <li><Link to='/login'>LogIn</Link></li>
+                            }
+                            
+                            
+                            <li><Link to='/signin'>SignIn</Link></li>
+
                     </ul>
                 </div>
                 <div className="navbar-end">

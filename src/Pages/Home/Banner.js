@@ -44,7 +44,7 @@ const Banner = () => {
                                 <h1 className="mb-5 lg:text-5xl md:text-4xl sm:text-3xl font-bold text-white">You can accomplish your poultry farm<br /> Goals with our help.</h1>
                                 <p className="mb-5 text-xl font-bold text-white">Through our service offerings, we assist our customers in achieving the highest possible results in their poultry company.</p>
                                 <Link to='/'>
-                                    <button className="btn btn-primary">Get Started</button>
+                                    <button className="btn btn-warning">Get Started</button>
                                 </Link>
 
                             </div>
@@ -60,7 +60,7 @@ const Banner = () => {
                                 <h1 className="mb-5 lg:text-5xl md:text-4xl sm:text-3xl font-bold text-white">You can accomplish your poultry farm<br /> Goals with our help.</h1>
                                 <p className="mb-5 text-xl font-bold text-white">Through our service offerings, we assist our customers in achieving the highest possible results in their poultry company.</p>
                                 <Link to='/'>
-                                    <button className="btn btn-primary">Get Started</button>
+                                    <button className="btn btn-warning">Get Started</button>
                                 </Link>
 
                             </div>

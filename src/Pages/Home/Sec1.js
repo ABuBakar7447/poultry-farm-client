@@ -17,18 +17,12 @@ import pic2 from '../../Picture/images (1).png'
 const Sec1 = () => {
     return (
         <div className='my-10'>
-            <h1 className='lg:text-5xl md:text-3xl text-3xl font-bold text-white text-center mt-16 mb-10'>What They Are <br/> Saying</h1>
+            <h1 className='lg:text-4xl md:text-3xl text-3xl font-bold text-white text-center mt-16 mb-10'>What They Are <br/> Saying</h1>
             
 
             <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 my-5">
-                <div className="...">
-                    <div>
-                        <img src={logo1} alt="" className="shadow-2xl w-full h-[376px]" />
-
-                    </div>
-                </div>
-
-                <div className="... h-[224px] bg-green-700">
+                
+                <div className="... h-[224px]">
                     <Swiper
                         spaceBetween={1}
                         centeredSlides={true}
@@ -44,7 +38,7 @@ const Sec1 = () => {
                         className="mySwiper"
                     >
                         <SwiperSlide>
-                            <div className='p-7 bg-green-700'>
+                            <div className='p-7 bg-[#191900]'>
                                 <div className='p-5'>
                                     <img src={pic1} alt="" className='w-16 h-16 border rounded-full mx-auto' />
                                 </div>
@@ -59,7 +53,7 @@ const Sec1 = () => {
 
 
                         <SwiperSlide>
-                            <div className='p-7 bg-green-700'>
+                            <div className='p-7 bg-[#191900]'>
                                 <div className='p-5'>
                                     <img src={pic2} alt="" className='w-16 h-16 border rounded-full mx-auto' />
                                 </div>
@@ -74,6 +68,16 @@ const Sec1 = () => {
 
                     </Swiper>
                 </div>
+
+
+
+                <div className="...">
+                    <div>
+                        <img src={logo1} alt="" className="shadow-2xl w-full h-[376px]" />
+
+                    </div>
+                </div>
+
 
             </div>
         </div>

@@ -70,7 +70,7 @@ const Comment = ({ _id, service_name }) => {
 
                     </div>
                     <div>
-                        <input onClick={notify} className='btn' type="submit" value="Submit" />
+                        <input onClick={notify} className='btn btn-outline btn-warning' type="submit" value="Submit" />
                         <ToastContainer />
                     </div>
                 </form>

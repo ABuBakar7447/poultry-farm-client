@@ -3,11 +3,12 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../context/Authprovider';
+import useTitle from '../../hooks/useTitle';
 import Comment from '../Reviews/Comment';
 import Reviews from '../Reviews/Reviews';
 
 const ServiceDetails = () => {
-    // useTitle('ServiceDetails')
+    
     const {user} = useContext(AuthContext)
     const {_id, service_name, image_url, description, rating, price} = useLoaderData()
 
@@ -35,7 +36,7 @@ const ServiceDetails = () => {
                 <Reviews _id={_id}></Reviews>
             </div>
             
-            <p className='font-bold text-center text-2xl text-rose-600  my-10'>Wants to comment?</p>
+            <p className='font-bold text-center lg:text-4xl md:text-3xl text-3xl text-yellow-600 mt-20  mb-10'>Wants to comment?</p>
             
 {/* using optional chaining if user logged in then show comment form otherwise show login option */}
             <div >
@@ -47,7 +48,7 @@ const ServiceDetails = () => {
 
                 </div>
                 :
-                <p className='text-center mb-6'>Please login first before comment. <Link to='/login' className='text-info underline'>Login</Link>
+                <p className='text-center text-white mb-6'>Please login first before comment. <Link to='/login' className='text-info underline'>Login</Link>
                 </p>
             }
                 

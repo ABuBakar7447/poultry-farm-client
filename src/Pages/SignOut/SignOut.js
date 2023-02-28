@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/Authprovider';
+import useTitle from '../../hooks/useTitle';
 
 const SignOut = () => {
+    useTitle('LogIn');
 
     const {logInUser} = useContext(AuthContext)
     const location = useLocation()

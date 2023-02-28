@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../hooks/useTitle';
 import ServiceCard from '../Home/ServiceCard';
 
 const AllService = () => {
 
     const [service, setService] = useState([]);
     const [spinner, setSpinner] = useState(true)
-    // useTitle('Service')
+    useTitle('Service')
 
     //getting all service from server
 
