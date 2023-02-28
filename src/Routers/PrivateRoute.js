@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../context/Authprovider';
 
-const Privateroute = ({children}) => {
+const PrivateRoute = ({children}) => {
     const { user,loading } = useContext(AuthContext);
         const location = useLocation();
     
@@ -16,4 +16,4 @@ const Privateroute = ({children}) => {
         return children;
 };
 
-export default Privateroute;
+export default PrivateRoute;

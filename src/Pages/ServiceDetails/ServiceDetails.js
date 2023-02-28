@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../context/Authprovider';
+import Comment from '../Reviews/Comment';
 import Reviews from '../Reviews/Reviews';
 
 const ServiceDetails = () => {
     // useTitle('ServiceDetails')
-    // const {user} = useContext(AuthContext)
+    const {user} = useContext(AuthContext)
     const {_id, service_name, image_url, description, rating, price} = useLoaderData()
 
     return (
@@ -36,7 +38,7 @@ const ServiceDetails = () => {
             <p className='font-bold text-center text-2xl text-rose-600  my-10'>Wants to comment?</p>
             
 {/* using optional chaining if user logged in then show comment form otherwise show login option */}
-            {/* <div >
+            <div >
             {
                 user?.email?
                 <div>
@@ -49,7 +51,7 @@ const ServiceDetails = () => {
                 </p>
             }
                 
-            </div> */}
+            </div>
 
             
             

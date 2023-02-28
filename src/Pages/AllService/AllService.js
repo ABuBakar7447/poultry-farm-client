@@ -27,7 +27,7 @@ const AllService = () => {
         <div>
             <div className='my-5'>
                 <h1 className='lg:text-4xl md:text-3xl sm:text-2xl font-bold text-yellow-600 text-center'>Choose The Service</h1>
-                <h2 className='font-bold text-black-600 text-center'>Will try my best to solve your problem</h2>
+                <h2 className='font-bold text-white text-center'>We will give out best to achieve your goal</h2>
 
 
                 {/* in order to design the service sending data in servicecard */}
