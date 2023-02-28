@@ -11,7 +11,7 @@ const AllService = () => {
     //getting all service from server
 
     useEffect(() => {
-        fetch('http://localhost:5000/allServices')
+        fetch('https://poultry-farm-services-server.vercel.app/allServices')
             .then(res => res.json())
             .then(data => {
                 setService(data);

@@ -14,53 +14,53 @@ import PrivateRoute from "./PrivateRoute";
 
 export const routes = createBrowserRouter([
     {
-        path:'/',
-        element:<Main></Main>,
-        children:[
-        {
-            path:'/',
-            element:<Home></Home>,
-        },
+        path: '/',
+        element: <Main></Main>,
+        children: [
+            {
+                path: '/',
+                element: <Home></Home>,
+            },
 
-        {
-            path: '/allServices',
-            element: <AllService></AllService>
-        },
+            {
+                path: '/allServices',
+                element: <AllService></AllService>
+            },
 
-        {
-            path: '/services/:id',
-            element: <ServiceDetails></ServiceDetails>,
-            loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
-        },
+            {
+                path: '/services/:id',
+                element: <ServiceDetails></ServiceDetails>,
+                loader: ({ params }) => fetch(`https://poultry-farm-services-server.vercel.app/services/${params.id}`)
+            },
 
-        {
-            path:'/login',
-            element:<SignOut></SignOut>
-        },
-        {
-            path:'/signin',
-            element:<SignIn></SignIn>
-        },
+            {
+                path: '/login',
+                element: <SignOut></SignOut>
+            },
+            {
+                path: '/signin',
+                element: <SignIn></SignIn>
+            },
 
-        {
-            path: '/myreview',
-            element:<PrivateRoute><MyReview></MyReview></PrivateRoute>
-        },
+            {
+                path: '/myreview',
+                element: <PrivateRoute><MyReview></MyReview></PrivateRoute>
+            },
 
-        {
-            path: '/update/:id',
-            element: <PrivateRoute><Update></Update></PrivateRoute>,
-            loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
-        },
+            {
+                path: '/update/:id',
+                element: <PrivateRoute><Update></Update></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://poultry-farm-services-server.vercel.app/reviews/${params.id}`)
+            },
 
-        {
-            path: '/addservice',
-            element:<PrivateRoute><AddService></AddService></PrivateRoute>
-        },
+            {
+                path: '/addservice',
+                element: <PrivateRoute><AddService></AddService></PrivateRoute>
+            },
 
-            
+
         ]
     }
-  
+
 
 ])

@@ -36,7 +36,7 @@ const Update = () => {
 
         //sending edited date to the server
         if (proceed) {
-            fetch(`http://localhost:5000/reviews/${_id}`, {
+            fetch(`https://poultry-farm-services-server.vercel.app/reviews/${_id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
@@ -59,25 +59,25 @@ const Update = () => {
 
     return (
         <div>
-             <div>
-            <form onSubmit={handleEdit}>
-                <div className='grid grid-cols-1 w-3/5 mx-auto my-5'>
-                    <input type="text" name='user_name' placeholder="Your name" defaultValue={editDetails.user_name} className="input input-bordered my-2" required />
+            <div>
+                <form onSubmit={handleEdit}>
+                    <div className='grid grid-cols-1 w-3/5 mx-auto my-5'>
+                        <input type="text" name='user_name' placeholder="Your name" defaultValue={editDetails.user_name} className="input input-bordered my-2" required />
 
-                    <input type="text" name='image_url' placeholder="Your Picture link" defaultValue={editDetails.image_url} className="input input-bordered my-2" />
+                        <input type="text" name='image_url' placeholder="Your Picture link" defaultValue={editDetails.image_url} className="input input-bordered my-2" />
 
-                    <input type="text" name='rating' placeholder="Your rating out of 5" defaultValue={editDetails.rating} className="input input-bordered my-2" required />
+                        <input type="text" name='rating' placeholder="Your rating out of 5" defaultValue={editDetails.rating} className="input input-bordered my-2" required />
 
-                    <input type="text" name='email' placeholder="" className="input input-bordered my-2" defaultValue={editDetails.email} readOnly />
+                        <input type="text" name='email' placeholder="" className="input input-bordered my-2" defaultValue={editDetails.email} readOnly />
 
-                    <input type="text" name='comment' placeholder="Please Comment Here" defaultValue={editDetails.comment} className="input input-bordered h-20 my-2" required />
+                        <input type="text" name='comment' placeholder="Please Comment Here" defaultValue={editDetails.comment} className="input input-bordered h-20 my-2" required />
 
-                    <input className='btn w-1/4' type="submit" value="Submit" />
-                </div>
+                        <input className='btn w-1/4' type="submit" value="Submit" />
+                    </div>
 
 
-            </form>
-        </div>
+                </form>
+            </div>
         </div>
     );
 };

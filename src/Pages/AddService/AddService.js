@@ -5,8 +5,8 @@ import useTitle from '../../hooks/useTitle';
 
 const AddService = () => {
 
-    
-    
+
+
 
 
     //adding service
@@ -34,7 +34,7 @@ const AddService = () => {
 
         //sending service data through post
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://poultry-farm-services-server.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -58,30 +58,30 @@ const AddService = () => {
     return (
         <div>
             <div>
-            <form onSubmit={handleService} className='w-3/5 mx-auto my-5'>
-                <div className='grid grid-cols-1'>
-                    <input type="text" name='service_name' placeholder="Service name" className="input input-bordered my-2" required />
+                <form onSubmit={handleService} className='w-3/5 mx-auto my-5'>
+                    <div className='grid grid-cols-1'>
+                        <input type="text" name='service_name' placeholder="Service name" className="input input-bordered my-2" required />
 
-                    <input type="text" name='service_id' placeholder="Service Id" className="input input-bordered my-2" required />
+                        <input type="text" name='service_id' placeholder="Service Id" className="input input-bordered my-2" required />
 
-                    <input type="text" name='image_url' placeholder="Your Picture link" className="input input-bordered my-2" required />
+                        <input type="text" name='image_url' placeholder="Your Picture link" className="input input-bordered my-2" required />
 
-                    <input type="text" name='rating' placeholder="Your rating out of 5" className="input input-bordered my-2" required />
+                        <input type="text" name='rating' placeholder="Your rating out of 5" className="input input-bordered my-2" required />
 
-                    <input type="text" name='price' placeholder="Give Price Amount" className="input input-bordered my-2" required />
+                        <input type="text" name='price' placeholder="Give Price Amount" className="input input-bordered my-2" required />
 
 
 
-                    <input type="text" name='description' placeholder="Please Give Description" className="input input-bordered h-20 my-2" required />
+                        <input type="text" name='description' placeholder="Please Give Description" className="input input-bordered h-20 my-2" required />
 
-                </div>
-                <div>
-                <input onClick={notify} className='btn' type="submit" value="Submit" />
-                <ToastContainer />
-                </div>
-            </form>
-        </div>
-    );
+                    </div>
+                    <div>
+                        <input onClick={notify} className='btn' type="submit" value="Submit" />
+                        <ToastContainer />
+                    </div>
+                </form>
+            </div>
+            );
         </div>
     );
 };

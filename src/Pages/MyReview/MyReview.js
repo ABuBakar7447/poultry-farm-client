@@ -12,7 +12,7 @@ const MyReview = () => {
 
     //collecting data base on user email
     useEffect(() => {
-        fetch(`http://localhost:5000/userreview?email=${user?.email}`)
+        fetch(`https://poultry-farm-services-server.vercel.app/userreview?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setUser(data))
     }, [user?.email])
@@ -22,7 +22,7 @@ const MyReview = () => {
     const haldleDelete = id => {
         const proceed = window.confirm('Do you want to remove your comment?');
         if (proceed) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
+            fetch(`https://poultry-farm-services-server.vercel.app/reviews/${id}`, {
                 method: 'Delete'
             })
 

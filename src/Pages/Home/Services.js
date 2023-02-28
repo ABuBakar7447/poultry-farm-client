@@ -6,7 +6,7 @@ const Services = () => {
 
     const [service, setService] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/limitedService')
+        fetch('https://poultry-farm-services-server.vercel.app/limitedService')
             .then(res => res.json())
             .then(data => setService(data))
     }, [])
