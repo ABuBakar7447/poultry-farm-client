@@ -24,7 +24,7 @@ const ServiceCard = ({viewService}) => {
                             <Link className='underline text-yellow-400' to={`/services/${_id}`}>View More</Link>
                         </p>
                         <div className="card-actions justify-center">
-                            <Link to={`/services/${_id}`}><button className="btn btn-outline btn-warning btn-sm">Hire Now</button></Link>
+                            <Link to={`/services/${_id}`}><button className="btn btn-outline btn-warning btn-sm">Visit Now</button></Link>
                         </div>
                     </div>
                 </div>

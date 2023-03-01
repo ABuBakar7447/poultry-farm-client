@@ -6,7 +6,7 @@ import useTitle from '../../hooks/useTitle';
 const AddService = () => {
 
 
-
+    useTitle('AddService')
 
 
     //adding service
@@ -81,7 +81,7 @@ const AddService = () => {
                     </div>
                 </form>
             </div>
-            );
+           
         </div>
     );
 };
